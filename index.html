@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv=Content-Type>
+        <meta content="text/css" http-equiv=Content-Style-Type>
+        <meta content=en http-equiv=Content-Language>
+        <title>Exercices chapitre 4</title>
+        <link rel="stylesheet" href="css/main.css?v=1.0">
+        <style type="text/css">
+            *:focus{outline: none;}
+            form{display:block;float:left;width:400px;}
+            iframe{display:block;float:left;width:600px;height:600px;margin:10px;border:1px solid #cccccc;box-shadow: 0px 0px 2px #E3E3E3; }
+            fieldset{ border: 1px solid #cccccc; border-top: none; box-shadow: 0px 0px 2px #E3E3E3; width: 350px; height:370px; }
+            ul{ list-style-type:none; padding-left: 2px; }
+            li{padding: 3px 0px 2px 0px;}
+            label{ font-weight:bold; display: inline-block; float: left; width: 75px; }
+            ul input { height: 15px; width:140px; padding: 5px 8px; border-radius: 2px; border: 1px solid #eee; }
+            #upload_img{ width: 250px; height: 25px; }
+            .validationButton{ height: 30px; border-radius: 2px; border: 1px solid grey; margin:5px 10px; cursor:pointer;}
+            .important{border-color:#ff0000;background-color:#000000;color:#ff0000;}
+        </style>
+
+    </head>
+
+<body style="zoom: 1;">
+    <form class='contact_form' action='http://www.action-creation.fr/cnam/HTML_CSS/chapitre4/validateForm.php'
+        method='post' name='contact_form' target='_blank'>
+        <fieldset>
+            <legend>Formulaire de forum</legend>
+            <ul>
+                <li>
+                    <label for="nom">Nom : </label>
+                    <input type="text" name="nom" id="nom" required="">
+                </li>
+                <li>
+                    <label for="prenom">Prenom : </label>
+                    <input type="text" name="prenom" id="prenom" required="">
+                </li>
+                <li>
+                    <label for="email">e-mail : </label>
+                    <input type="email" name="email" id="email" required="">
+                </li>
+                <li>
+                    <label for="message_sent">Message : </label><br>
+                    <textarea name="message" cols="35" rows="3" id="message_sent"></textarea>
+                </li>
+                <li>	
+                    <label for="upload_img">image:</label>
+                    <input type="file" name="image" id="upload_img">
+                </li>
+                
+            </ul>            
+            <button class="validationButton" type="submit" name="envoi" value="normal">Envoyer en mode normal</button>
+            <button class="validationButton important" type="submit" name="envoi" value="important">Envoyer en mode important</button>
+            <input type="hidden" name="specialMode" value="forum">
+        </fieldset>
+    </form>
+    <iframe name="monIframe"></iframe>
+</body>
+
+</html>
